@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct FirstTimeView: View {
+struct HomeView: View {
     var body: some View {
         VStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Text("HomeView")
         }
     }
 }
 
 struct FirstTimeView_Previews: PreviewProvider {
     static var previews: some View {
-        FirstTimeView()
+        HomeView()
     }
 }

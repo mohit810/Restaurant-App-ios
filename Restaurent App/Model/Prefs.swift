@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Prefs {
+struct Prefs: Codable {
     var firstLoad: Bool = true
 }
