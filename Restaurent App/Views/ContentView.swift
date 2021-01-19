@@ -20,12 +20,18 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack {
-                LottieView(animationName: "restaurantloader")
-                    .frame(width: 200, height: 200)
                 if firstLoadFlag {
-                    NavigationLink(destination: OnboardingView() , isActive: $timerFlag) {}
+                    LottieView(animationName: "restaurantloader")
+                        .frame(width: 200, height: 200)
+                    NavigationLink(destination: OnboardingView(data: OnboardingDataModel.data, doneFunction: {
+                        self.firstLoadFlag = false
+                    }) , isActive: $timerFlag) {}
                 } else {
-                    NavigationLink(destination: HomeView() , isActive: $timerFlag) {}
+                    HStack {
+                        ButtonView(text: "Sign up", color: Color.accentColor).padding(8)
+                        ButtonView(text: "Login", color: Color.accentColor).padding(8)
+                        ButtonView(text: "Home", color: Color.accentColor).padding(8)
+                    }.position(x: 10.0, y: 10.0)
                 }
             }.onAppear {
                 self.startTimer()

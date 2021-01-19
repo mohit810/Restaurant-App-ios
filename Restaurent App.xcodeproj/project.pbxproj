@@ -20,6 +20,7 @@
 		E452A18F25B6034D00E788C9 /* dlivery_man.json in Resources */ = {isa = PBXBuildFile; fileRef = E452A18E25B6034D00E788C9 /* dlivery_man.json */; };
 		E452A19325B608E800E788C9 /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A19225B608E800E788C9 /* OnboardingStepView.swift */; };
 		E452A19625B6092300E788C9 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A19525B6092300E788C9 /* OnboardingDataModel.swift */; };
+		E452A19D25B757B300E788C9 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A19C25B757B300E788C9 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E452A18E25B6034D00E788C9 /* dlivery_man.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dlivery_man.json; sourceTree = "<group>"; };
 		E452A19225B608E800E788C9 /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
 		E452A19525B6092300E788C9 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		E452A19C25B757B300E788C9 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		E452A16125B460B700E788C9 /* Restaurent App */ = {
 			isa = PBXGroup;
 			children = (
+				E452A19B25B7578400E788C9 /* UI */,
 				E452A17E25B4685E00E788C9 /* Model */,
 				E452A17925B4628200E788C9 /* Views */,
 				E452A17825B4624800E788C9 /* Lottie */,
@@ -139,6 +142,14 @@
 				E452A17F25B468A600E788C9 /* Prefs.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E452A19B25B7578400E788C9 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E452A19C25B757B300E788C9 /* ButtonView.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 				E452A16325B460B700E788C9 /* Restaurent_AppApp.swift in Sources */,
 				E452A18625B5FAFE00E788C9 /* OnboardingView.swift in Sources */,
 				E452A18025B468A600E788C9 /* Prefs.swift in Sources */,
+				E452A19D25B757B300E788C9 /* ButtonView.swift in Sources */,
 				E452A17B25B462BB00E788C9 /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
