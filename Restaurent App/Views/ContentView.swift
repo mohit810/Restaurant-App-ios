@@ -18,23 +18,61 @@ struct ContentView: View {
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Prefs.plist")
     
     var body: some View {
-        NavigationView{
-            VStack {
-                if firstLoadFlag {
-                    LottieView(animationName: "restaurantloader")
-                        .frame(width: 200, height: 200)
-                    NavigationLink(destination: OnboardingView(data: OnboardingDataModel.data, doneFunction: {
-                        self.firstLoadFlag = false
-                    }) , isActive: $timerFlag) {}
-                } else {
-                    HStack {
-                        ButtonView(text: "Sign up", color: Color.accentColor).padding(8)
-                        ButtonView(text: "Login", color: Color.accentColor).padding(8)
-                        ButtonView(text: "Home", color: Color.accentColor).padding(8)
-                    }.position(x: 10.0, y: 10.0)
+        VStack {
+            NavigationView{
+                VStack {
+                    if firstLoadFlag {
+                        LottieView(animationName: "restaurantloader")
+                            .frame(width: 200, height: 200)
+                        NavigationLink(destination: OnboardingView(data: OnboardingDataModel.data, doneFunction: {
+                            self.firstLoadFlag = false
+                        }) , isActive: $timerFlag) {}
+                    } else {
+                        VStack {
+                            Image("logo")
+                                .frame(width: 100, height: 100,alignment: .bottom)
+                            VStack {
+                                Spacer()
+                                HStack {
+                                    Image("farm_veg")
+                                        .resizable()
+                                        .frame(width: 40, height: 55, alignment: .leading)
+                                    Text("Our Ingredients are daily supplied by local Farmers")
+                                }.padding(EdgeInsets(.init(top: 0, leading: 5, bottom: 5, trailing: 0)))
+                                Spacer()
+                                HStack {
+                                    Image("freshly_made")
+                                        .resizable()
+                                        .frame(width: 55, height: 55, alignment: .leading)
+                                    Text("We Serve and Deliver Freshly made Delicious Food")
+                                }.padding(EdgeInsets(.init(top: 0, leading: 8, bottom: 5, trailing: 0)))
+                                Spacer()
+                                HStack {
+                                    Image("delivery")
+                                        .resizable()
+                                        .frame(width: 55, height: 55, alignment: .leading)
+                                    Text("We also Deliver the food home for the foodie in you")
+                                }.padding(EdgeInsets(.init(top: 0, leading: 8, bottom: 5, trailing: 0)))
+                                Spacer()
+                                HStack {
+                                    Image("help_chat")
+                                        .resizable()
+                                        .frame(width: 55, height: 55, alignment: .leading)
+                                    Text("If you have any doubt or query you can reach us through the App")
+                                }.padding(EdgeInsets(.init(top: 0, leading: 8, bottom: 5, trailing: 0)))
+                                Spacer()
+                            }
+                            Spacer()
+                            HStack {
+                                ButtonView(text: "Sign up", color: Color.accentColor).padding(8)
+                                ButtonView(text: "Login", color: Color.accentColor).padding(8)
+                                ButtonView(text: "Home", color: Color.accentColor).padding(8)
+                            }
+                        }
+                    }
+                }.onAppear {
+                    self.startTimer()
                 }
-            }.onAppear {
-                self.startTimer()
             }
         }
     }
