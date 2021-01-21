@@ -12,10 +12,8 @@ struct OnboardingStepView: View {
     
     var body: some View {
         VStack {
-            Image(data.image)
-                .resizable()
+            LottieView(animationName: data.animation, looper: true)
                 .scaledToFit()
-                .padding(.bottom, 50)
             
             Text(data.heading)
                 .font(.system(size: 25, design: .rounded))

@@ -22,7 +22,7 @@ struct ContentView: View {
             NavigationView{
                 VStack {
                     if firstLoadFlag {
-                        LottieView(animationName: "restaurantloader")
+                        LottieView(animationName: "restaurantloader", looper: false)
                             .frame(width: 200, height: 200)
                         NavigationLink(destination: OnboardingView(data: OnboardingDataModel.data, doneFunction: {
                             self.firstLoadFlag = false
@@ -30,7 +30,8 @@ struct ContentView: View {
                     } else {
                         VStack {
                             Image("logo")
-                                .frame(width: 100, height: 100,alignment: .bottom)
+                                .resizable()
+                                .frame(width: 250, height: 250,alignment: .top)
                             VStack {
                                 Spacer()
                                 HStack {
