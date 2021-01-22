@@ -18,6 +18,7 @@ struct ButtonView: View {
             .frame(height: 50)
             .overlay(HStack {
                 Text(text)
+                    .foregroundColor(.white)
             })
     }
 }

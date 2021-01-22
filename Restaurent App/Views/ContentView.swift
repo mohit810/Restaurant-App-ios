@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var timerFlag: Bool = false
     @State var firstLoadFlag: Bool = true
     @State var timer : Timer? = nil
+    @State var navigationFlag: String = ""
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Prefs.plist")
     
@@ -65,14 +66,26 @@ struct ContentView: View {
                             }
                             Spacer()
                             HStack {
-                                ButtonView(text: "Sign up", color: Color.accentColor).padding(8)
-                                ButtonView(text: "Login", color: Color.accentColor).padding(8)
-                                ButtonView(text: "Home", color: Color.accentColor).padding(8)
+                                NavigationLink(destination: OrderView()) {
+                                    ButtonView(text: "Sign up", color: Color.accentColor)
+                                        .padding(8)
+                                }
+                                NavigationLink(destination: OrderView()) {
+                                    ButtonView(text: "Login", color: Color.accentColor)
+                                        .padding(8)
+                                }
+                                NavigationLink(destination: HomeView()) {
+                                    ButtonView(text: "Home", color: Color.accentColor)
+                                        .padding(8)
+                                }
                             }
                         }
                     }
                 }.onAppear {
                     self.startTimer()
+                }
+                if navigationFlag == "1"{
+                    
                 }
             }
         }

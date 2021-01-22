@@ -10,7 +10,14 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            Text("HomeView")
+            TabView{
+             DishesView()
+                .tabItem {
+                    Image("lunch")
+                        .resizable()
+                        .scaledToFit()
+                }
+            }
         }.navigationBarHidden(true)
     }
 }
