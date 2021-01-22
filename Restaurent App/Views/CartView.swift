@@ -1,5 +1,5 @@
 //
-//  DishesView.swift
+//  OrderView.swift
 //  Restaurent App
 //
 //  Created by Mohit Yadav on 21/01/21.
@@ -7,14 +7,15 @@
 
 import SwiftUI
 
-struct DishesView: View {
+struct CartView: View {
     var body: some View {
-        Text("Dishes")
+        Text("Orders")
+        
     }
 }
 
-struct DishesView_Previews: PreviewProvider {
+struct CartView_Previews: PreviewProvider {
     static var previews: some View {
-        DishesView()
+        CartView()
     }
 }

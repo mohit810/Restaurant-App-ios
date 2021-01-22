@@ -66,11 +66,11 @@ struct ContentView: View {
                             }
                             Spacer()
                             HStack {
-                                NavigationLink(destination: OrderView()) {
+                                NavigationLink(destination: RegisterView()) {
                                     ButtonView(text: "Sign up", color: Color.accentColor)
                                         .padding(8)
                                 }
-                                NavigationLink(destination: OrderView()) {
+                                NavigationLink(destination: LoginView()) {
                                     ButtonView(text: "Login", color: Color.accentColor)
                                         .padding(8)
                                 }

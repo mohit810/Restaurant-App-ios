@@ -9,21 +9,50 @@ import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
+        
             TabView{
-             DishesView()
-                .tabItem {
-                    Image("lunch")
-                        .resizable()
-                        .scaledToFit()
-                }
+                DishesView()
+                    .tag(0)
+                    .tabItem({
+                        Image(systemName: "mail")
+                        Text("Menu")
+                    })
+                SearchView()
+                    .tag(1)
+                    .tabItem({
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    })
+                CartView()
+                    .tag(2)
+                    .tabItem({
+                        Image(systemName: "cart")
+                        Text("Cart")
+                    })
+                AccountView()
+                    .tag(3)
+                    .tabItem({
+                        Image(systemName: "person.crop.circle")
+                        Text("Account")
+                    })
             }
-        }.navigationBarHidden(true)
     }
 }
 
 struct FirstTimeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
+    }
+}
+
+struct TabBarItem {
+    var view: AnyView
+    var image: Image
+    var title: String
+    
+    init<V: View>(view: V, image: Image, title: String) {
+        self.view = AnyView(view)
+        self.image = image
+        self.title = title
     }
 }
