@@ -29,6 +29,9 @@
 		E452A1B925B9F2EA00E788C9 /* DishesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1B825B9F2EA00E788C9 /* DishesView.swift */; };
 		E452A1BE25BB4E7400E788C9 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1BD25BB4E7400E788C9 /* LoginView.swift */; };
 		E452A1C125BB4E8300E788C9 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1C025BB4E8300E788C9 /* RegisterView.swift */; };
+		E452A1C425BDC28200E788C9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1C325BDC28200E788C9 /* Api.swift */; };
+		E452A1C725BDC33900E788C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1C625BDC33900E788C9 /* Constants.swift */; };
+		E452A1CC25BDEE4400E788C9 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1CB25BDEE4400E788C9 /* RedditModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		E452A1B825B9F2EA00E788C9 /* DishesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishesView.swift; sourceTree = "<group>"; };
 		E452A1BD25BB4E7400E788C9 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E452A1C025BB4E8300E788C9 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		E452A1C325BDC28200E788C9 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		E452A1C625BDC33900E788C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E452A1CB25BDEE4400E788C9 /* RedditModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +116,8 @@
 		E452A16125B460B700E788C9 /* Restaurent App */ = {
 			isa = PBXGroup;
 			children = (
-				E452A1A125B9E00200E788C9 /* Data Model */,
+				E452A1A125B9E00200E788C9 /* Helpers */,
 				E452A19B25B7578400E788C9 /* UI */,
-				E452A17E25B4685E00E788C9 /* Plist */,
 				E452A17925B4628200E788C9 /* Views */,
 				E452A17825B4624800E788C9 /* Lottie */,
 				E452A16225B460B700E788C9 /* Restaurent_AppApp.swift */,
@@ -174,17 +179,21 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		E452A1A125B9E00200E788C9 /* Data Model */ = {
+		E452A1A125B9E00200E788C9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E452A19525B6092300E788C9 /* OnboardingDataModel.swift */,
+				E452A1CB25BDEE4400E788C9 /* RedditModel.swift */,
+				E452A17E25B4685E00E788C9 /* Plist */,
+				E452A1C325BDC28200E788C9 /* Api.swift */,
+				E452A1C625BDC33900E788C9 /* Constants.swift */,
 			);
-			path = "Data Model";
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		E452A1A325B9E06100E788C9 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				E452A19525B6092300E788C9 /* OnboardingDataModel.swift */,
 				E452A18525B5FAFE00E788C9 /* OnboardingView.swift */,
 				E452A19225B608E800E788C9 /* OnboardingStepView.swift */,
 			);
@@ -318,10 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E452A1B625B9F2B900E788C9 /* AccountView.swift in Sources */,
+				E452A1C725BDC33900E788C9 /* Constants.swift in Sources */,
 				E452A16525B460B700E788C9 /* ContentView.swift in Sources */,
+				E452A1C425BDC28200E788C9 /* Api.swift in Sources */,
 				E452A18325B46A4100E788C9 /* HomeView.swift in Sources */,
 				E452A19625B6092300E788C9 /* OnboardingDataModel.swift in Sources */,
 				E452A19325B608E800E788C9 /* OnboardingStepView.swift in Sources */,
+				E452A1CC25BDEE4400E788C9 /* RedditModel.swift in Sources */,
 				E452A16325B460B700E788C9 /* Restaurent_AppApp.swift in Sources */,
 				E452A1C125BB4E8300E788C9 /* RegisterView.swift in Sources */,
 				E452A18625B5FAFE00E788C9 /* OnboardingView.swift in Sources */,

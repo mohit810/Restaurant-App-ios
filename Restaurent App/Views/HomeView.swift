@@ -44,15 +44,3 @@ struct FirstTimeView_Previews: PreviewProvider {
         HomeView()
     }
 }
-
-struct TabBarItem {
-    var view: AnyView
-    var image: Image
-    var title: String
-    
-    init<V: View>(view: V, image: Image, title: String) {
-        self.view = AnyView(view)
-        self.image = image
-        self.title = title
-    }
-}
