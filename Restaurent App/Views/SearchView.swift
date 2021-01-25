@@ -11,23 +11,35 @@ struct SearchView: View {
     
     @State var flag = true
     @State var models = [RedditModel]()
+    @State var posts = [RedditPostModel]()
+    @State var searchText = ""
     
     var body: some View {
         ZStack {
-            Button(action: { apifunc() }) {
-                Text("hest")
+            Color.init(.systemGray5)
+            VStack {
+            SearchBar(text: $searchText)
+                .padding(.top)
+                .frame(alignment: .top)
+                List(posts.filter({ searchText.isEmpty ? true : $0.title.contains(searchText) })) { item in
+                    DishCard(url: item.thumbnail, title: item.title, address: item.author, city: item.author, categories: ["dcxA"], kilometres: 4.33)
+                        .scaledToFit()
+                }
             }
-
-        }.alert(isPresented: $flag, content: {
-            Alert(title: Text("Important message"), message: Text("Wear sunscreen"), dismissButton: .default(Text("Got it!")))
-        })
+        }.onAppear {
+            self.apifunc()
+        }
+        .background(Color.init(.systemGray5))
     }
     func apifunc() {
         Api<[RedditModel]>.get(self, path: "data.children", url: "https://www.reddit.com/top.json?limit=50") { (posts) in
-            models = posts
+            self.models = posts
+            for post in posts {
+                self.posts.append(post.data)
+            }
             DispatchQueue.main.async() {
-                print("hi")
-        //        self.tableView.reloadData()
+                print(self.posts)
+                //        self.tableView.reloadData()
             }
         }
     }
@@ -40,7 +52,7 @@ struct SearchView_Previews: PreviewProvider {
 }
 
 extension SearchView: ApiDelegate {
-
+    
     func onError() {
         DispatchQueue.main.async() {
             let alert = UIAlertController(title: "Ups", message: "An error has occurred...", preferredStyle: .alert)

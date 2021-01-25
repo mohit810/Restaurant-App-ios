@@ -14,7 +14,6 @@ struct ContentView: View {
     @State var timerFlag: Bool = false
     @State var firstLoadFlag: Bool = true
     @State var timer : Timer? = nil
-    @State var navigationFlag: String = ""
     
     let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Prefs.plist")
     
@@ -84,9 +83,8 @@ struct ContentView: View {
                 }.onAppear {
                     self.startTimer()
                 }
-                if navigationFlag == "1"{
-                    
-                }
+                .navigationBarTitle(Text("Home"),displayMode: .inline)
+                .navigationBarHidden(true)
             }
         }
     }

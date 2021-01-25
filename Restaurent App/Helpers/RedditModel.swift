@@ -11,7 +11,7 @@ struct RedditModel: Codable {
     let data: RedditPostModel
 }
 
-struct RedditPostModel: Codable {
+struct RedditPostModel: Codable, Identifiable {
     let id: String
     let title: String
     let author: String

@@ -32,6 +32,10 @@
 		E452A1C425BDC28200E788C9 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1C325BDC28200E788C9 /* Api.swift */; };
 		E452A1C725BDC33900E788C9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1C625BDC33900E788C9 /* Constants.swift */; };
 		E452A1CC25BDEE4400E788C9 /* RedditModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1CB25BDEE4400E788C9 /* RedditModel.swift */; };
+		E452A1CF25BE866C00E788C9 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1CE25BE866C00E788C9 /* SearchBar.swift */; };
+		E452A1D225BE947600E788C9 /* DishCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1D125BE947600E788C9 /* DishCard.swift */; };
+		E452A1D625BE9E4500E788C9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1D525BE9E4500E788C9 /* ImageLoader.swift */; };
+		E452A1D925BF2F7E00E788C9 /* CategoryPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E452A1D825BF2F7E00E788C9 /* CategoryPill.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +68,10 @@
 		E452A1C325BDC28200E788C9 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		E452A1C625BDC33900E788C9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E452A1CB25BDEE4400E788C9 /* RedditModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditModel.swift; sourceTree = "<group>"; };
+		E452A1CE25BE866C00E788C9 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		E452A1D125BE947600E788C9 /* DishCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DishCard.swift; sourceTree = "<group>"; };
+		E452A1D525BE9E4500E788C9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		E452A1D825BF2F7E00E788C9 /* CategoryPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPill.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +183,9 @@
 			children = (
 				E452A19C25B757B300E788C9 /* ButtonView.swift */,
 				E452A17A25B462BB00E788C9 /* LottieView.swift */,
+				E452A1CE25BE866C00E788C9 /* SearchBar.swift */,
+				E452A1D125BE947600E788C9 /* DishCard.swift */,
+				E452A1D825BF2F7E00E788C9 /* CategoryPill.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -182,10 +193,11 @@
 		E452A1A125B9E00200E788C9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E452A1CB25BDEE4400E788C9 /* RedditModel.swift */,
 				E452A17E25B4685E00E788C9 /* Plist */,
+				E452A1CB25BDEE4400E788C9 /* RedditModel.swift */,
 				E452A1C325BDC28200E788C9 /* Api.swift */,
 				E452A1C625BDC33900E788C9 /* Constants.swift */,
+				E452A1D525BE9E4500E788C9 /* ImageLoader.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -333,14 +345,18 @@
 				E452A18325B46A4100E788C9 /* HomeView.swift in Sources */,
 				E452A19625B6092300E788C9 /* OnboardingDataModel.swift in Sources */,
 				E452A19325B608E800E788C9 /* OnboardingStepView.swift in Sources */,
+				E452A1D225BE947600E788C9 /* DishCard.swift in Sources */,
 				E452A1CC25BDEE4400E788C9 /* RedditModel.swift in Sources */,
 				E452A16325B460B700E788C9 /* Restaurent_AppApp.swift in Sources */,
 				E452A1C125BB4E8300E788C9 /* RegisterView.swift in Sources */,
 				E452A18625B5FAFE00E788C9 /* OnboardingView.swift in Sources */,
 				E452A18025B468A600E788C9 /* Prefs.swift in Sources */,
 				E452A1BE25BB4E7400E788C9 /* LoginView.swift in Sources */,
+				E452A1D625BE9E4500E788C9 /* ImageLoader.swift in Sources */,
 				E452A19D25B757B300E788C9 /* ButtonView.swift in Sources */,
 				E452A17B25B462BB00E788C9 /* LottieView.swift in Sources */,
+				E452A1CF25BE866C00E788C9 /* SearchBar.swift in Sources */,
+				E452A1D925BF2F7E00E788C9 /* CategoryPill.swift in Sources */,
 				E452A1B025B9F27400E788C9 /* CartView.swift in Sources */,
 				E452A1B325B9F28700E788C9 /* SearchView.swift in Sources */,
 				E452A1B925B9F2EA00E788C9 /* DishesView.swift in Sources */,
