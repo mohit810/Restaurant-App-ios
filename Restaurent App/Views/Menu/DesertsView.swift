@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DesertsView: View {
     var body: some View {
+        Spacer()
         Text("DesertsView")
+        Spacer()
     }
 }
 

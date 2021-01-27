@@ -9,7 +9,9 @@ import SwiftUI
 
 struct MainCourseView: View {
     var body: some View {
+        Spacer()
         Text("MainCourseView")
+        Spacer()
     }
 }
 

@@ -9,48 +9,60 @@ import SwiftUI
 
 struct DishesView: View {
     
-    @State private var selectedTab: Int = 0
-    
-    var body: some View {
-        VStack {
-            TabView {
-                Text("The First Tab")
-                        .tabItem {
-                            Image(systemName: "1.square.fill")
-                            Text("First")
-                        }
-                    Text("Another Tab")
-                        .tabItem {
-                            Image(systemName: "2.square.fill")
-                            Text("Second")
-                        }
-                    Text("The Last Tab")
-                        .tabItem {
-                            Image(systemName: "3.square.fill")
-                            Text("Third")
-                        }
+    @State var selectedTab = Tabs.FirstTab
+        
+        var body: some View {
+            VStack {
+                HStack {
+                    Spacer()
+                    VStack {
+                        Text("First tab")
+                            .foregroundColor(selectedTab == .FirstTab ? Color.white : Color.black)
+                        
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .FirstTab
+                    }
+                    Spacer()
+                    VStack {
+                        Text("Second tab")
+                            .foregroundColor(selectedTab == .SecondTab ? Color.white : Color.black)
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .SecondTab
+                    }
+                    Spacer()
+                    VStack {
+                        Text("Third tab")
+                            .foregroundColor(selectedTab == .ThirdTab ? Color.white : Color.black)
+                    }
+                    .onTapGesture {
+                        self.selectedTab = .ThirdTab
+                    }
+                    Spacer()
                 }
-            .font(.headline)
-            
-//            Picker("yg", selection: $selectedTab) {
-//                       Text("First").tag(0)
-//                       Text("Second").tag(1)
-//                       Text("Third").tag(2)
-//                   }
-//
-//                   switch(selectedTab) {
-//                       case 0: StartersView()
-//                       case 1: MainCourseView()
-//                       case 2: DesertsView()
-//                   default:
-//                    StartersView()
-//                   }
-               }
-    }
+                .padding(.vertical)
+                .background(Color.accentColor)
+                
+                if selectedTab == .FirstTab {
+                    StartersView()
+                } else if selectedTab == .SecondTab {
+                    MainCourseView()
+                } else {
+                    DesertsView()
+                }
+            }
+        }
 }
 
 struct DishesView_Previews: PreviewProvider {
     static var previews: some View {
         DishesView()
     }
+}
+
+enum Tabs {
+    case FirstTab
+    case SecondTab
+    case ThirdTab
 }

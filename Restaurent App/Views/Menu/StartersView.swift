@@ -9,7 +9,11 @@ import SwiftUI
 
 struct StartersView: View {
     var body: some View {
-        Text("StartersView")
+        VStack {
+            Spacer()
+            Text("StartersView")
+            Spacer()
+        }
     }
 }
 
